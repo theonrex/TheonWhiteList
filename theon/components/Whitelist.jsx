@@ -149,12 +149,12 @@ const Whitelist = () => {
 	
 	useEffect(() => {
 
-		if (window.ethereum.isMetaMask) {
+		if (window.ethereum) {
 			console.log("all good");
 		} else {
 										console.log(" good");
 
-			alert("install metamask extension!!");
+			alert("Install Metamask!!");
 		}
 					})   ;
 

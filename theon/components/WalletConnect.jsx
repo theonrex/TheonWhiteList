@@ -42,10 +42,12 @@ export const WalletConnects = () => {
 		} catch (error) {
 			console.error(error);
 		}
+		
 	};
 	useEffect(() => {
 		if (provider?.on) {
 			const handleAccountsChanged = (accounts) => {
+				setAccounts(accounts);
 			};
 
 			const handleChainChanged = (chainId) => {
@@ -98,22 +100,23 @@ useEffect(() => {
 
 
 
-export const getProviderOrSigner = async (needSigner = false) => {
-	// Connect to Metamask
-	// Since we store `web3Modal` as a reference, we need to access the `current` value to get access to the underlying object
-	const provider = await web3Modal.connect();
-	const web3Provider = new providers.Web3Provider(provider);
 
-	// If user is not connected to the Goerli network, let them know and throw an error
-	// const { chainId } = await web3Provider.getNetwork();
-	// if (chainId !== 5) {
-	// 	window.alert("change to goerli network");
-	// 	throw new Error("Change Network TO Goerli");
-	// }
+// export const getProviderOrSigner = async (needSigner = false) => {
+// 	// Connect to Metamask
+// 	// Since we store `web3Modal` as a reference, we need to access the `current` value to get access to the underlying object
+// 	const provider = await web3Modal.connect();
+// 	const web3Provider = new providers.Web3Provider(provider);
 
-	if (needSigner) {
-		const signer = web3Provider.getSigner();
-		return signer;
-	}
-	return web3Provider;
-};
+// 	// If user is not connected to the Goerli network, let them know and throw an error
+// 	// const { chainId } = await web3Provider.getNetwork();
+// 	// if (chainId !== 5) {
+// 	// 	window.alert("change to goerli network");
+// 	// 	throw new Error("Change Network TO Goerli");
+// 	// }
+
+// 	if (needSigner) {
+// 		const signer = web3Provider.getSigner();
+// 		return signer;
+// 	}
+// 	return web3Provider;
+// };
