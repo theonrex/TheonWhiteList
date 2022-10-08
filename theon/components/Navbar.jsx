@@ -20,10 +20,16 @@ function NavBar() {
 							<Container fluid>
 								<Navbar.Brand href="/"> TheonNFTS</Navbar.Brand>
 								<div className="nav_t">
+
 									<Navbar.Toggle
 										aria-controls={`offcanvasNavbar-expand-${expand}`}
 									/>
+											<Button className="orange-btn hide_desktop">
+													{" "}
+													<WalletConnects />
+												</Button>
 								</div>
+						
 
 								<Navbar.Offcanvas
 									id={`offcanvasNavbar-expand-${expand}`}
@@ -83,7 +89,7 @@ function NavBar() {
 														: "")
 												} `}
 											>
-												<Button className="orange-btn ">
+												<Button className="orange-btn hide_mobile">
 													{" "}
 													<WalletConnects />
 												</Button>
