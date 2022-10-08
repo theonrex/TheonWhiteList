@@ -22,6 +22,9 @@ body {
 img{
   width: 100%;
 }
+.make_sure{
+  padding-top: 0.5em;
+}
 
 button{
   border: unset;

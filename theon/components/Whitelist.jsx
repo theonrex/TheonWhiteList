@@ -181,7 +181,7 @@ const Whitelist = () => {
 		}
 		else {
 			return (
-					<button className="explore_btn" >   Connect Wallet</button>
+					<p className="make_sure" >Make Sure Wallet Is Connected </p>
 			);
 		}
 		//  else {
