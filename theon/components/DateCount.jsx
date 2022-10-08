@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const DateCount = () => {
 
-    const [expiryTime, setExpiryTime] = useState("5 feb 2024 15:30:25");
+    const [expiryTime, setExpiryTime] = useState("5 dec 2022 15:30:25");
 		const [countdownTime, setCountdownTime] = useState({
 			countdownDays: "",
 			countdownHours: "",
@@ -54,8 +54,9 @@ const DateCount = () => {
 		<div>
 			{" "}
 			<div className="">
-				<h4 className="Presale_text ">Presale Starts in</h4>
 				<div className="rowx ">
+				<h4 className="Presale_text ">Presale Starts in</h4>
+
 					{expiryTime !== false ? (
 						<div className=" ">
 							<section className="date_container btn_time_header">
