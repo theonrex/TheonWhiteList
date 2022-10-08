@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+html,
+body {
+  width: 100%;
+  color: white;
+  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
+  background-color: #140114;
+  background-image:
+    radial-gradient(at 47% 33%, hsl(297.84, 98%, 21%) 0, transparent 59%),
+    radial-gradient(at 82% 65%, hsl(234.55, 91%, 14.000000000000002%) 0, transparent 55%);
+
+  }
+
+    .navbar-toggler-icon,
+    .btn-close {
+     filter: invert(3);
+    }
+ 
+img{
+  width: 100%;
+}
+
+button{
+  border: unset;
+  box-shadow: unset;
+  border-color: unset;
+  border-inline: unset;
+}
+button:active,
+button:focus,
+button:hover,
+.offcanvas-header .btn-close:active,
+.offcanvas-header .btn-close:current,
+.offcanvas-header .btn-close:target,
+.offcanvas-header .btn-close:hover {
+  border: unset;
+  box-shadow: transparent;
+  border-color: transparent;
+  border-inline: unset;
+}
+
+button,
+button:hover,
+button:active,
+button:visited {
+  outline: none !important;
+  border: none !important;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.navbar-toggler,
+.btn-close {
+  color: transparent;
+  border-color: transparent;
+  opacity: 1;
+}
+
+a,
+:active {
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: white;
+}
+p,
+ul,
+li
+{
+  margin-inline: unset;
+  margin-block: unset;
+  margin: unset;
+  padding: unset;
+}
+
+
+.navbar-nav .show>.nav-link,
+.navbar-nav .nav-link.active,
+.navbar-brand {
+  color: white;
+}
+.navbar{
+  margin-top: 1.5em;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: auto 1em;
+  padding: 0;
+}
+
+/* homebanner */
+.rowx{
+  display: table;
+  width: 100%;
+
+}
+
+.col25 {
+  float: left;
+  width: 24%;
+  padding: 1em;
+}
+
+.col33 {
+  float: left;
+  width: 33%;
+  padding: 1em;
+}
+.col50{
+  float: left;
+  width: 49%;
+  padding: 1em;
+}
+
+.homebanner_h1{
+  font-size: 3em;
+  text-transform: capitalize;
+  padding-top: 1em;
+  font-weight: normal;
+}
+.btn_timer span{
+  font-size: 0.7em;
+}
+.home_banner_span{
+    font-size: 1.2em;
+font-weight: bold;
+background: #008ACF;
+  background: linear-gradient(to right, #008ACF 51%, #CF0068 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homebanner_p{
+  width: 70%;
+  text-align: left;
+  padding-top: 0.5em;
+  padding-bottom: 0.7em;
+}
+
+
+.banner_img  {
+}
+.banner_img img {
+  width: 100%;
+  font-size: 1em;
+}
+/*counter*/
+
+.btn_time_header{
+    backdrop-filter: blur(2px) saturate(137%);
+      -webkit-backdrop-filter: blur(2px) saturate(137%);
+      background-color: rgba(17, 25, 40, 0.13);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.btn_timer{
+  background-color: transparent;
+}
+.btn_timer_divider{
+    background-color: transparent;
+}
+
+.date_container{
+  width: 70%;
+  margin: auto;
+        text-align: center;
+  display: flex;
+}
+.Presale_text{
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+
+/* btn*/
+/* From uiverse.io by @adamgiebl */
+.explore_btn {
+  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+  background-size: 800% 400%;
+  padding: 0.5em 2em;
+    display: inline-block;
+  border: none;
+  border-radius: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 1em;
+  color: white;
+  transition: all .5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+.explore_btn:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+}
+
+.explore_btn:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+}
+
+
+/*types of wallet*/
+
+.Trade_wallet{
+  padding-bottom: 5em;
+}
+.Trade_wallet_header{
+  text-align: center;
+  font-family: 1.5em;
+  padding-bottom: 1.5em;
+  text-transform: capitalize;
+background: #008ACF;
+  background: linear-gradient(to right, #008ACF 51%, #CF0068 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.wallets_support{
+    padding-top: 1.5em;
+  text-align: center;
+  font-size: 3em;
+  text-transform: capitalize;
+}
+.Trade_wallet .col25 img{
+  border-radius: 50% !important;
+  padding: 2em;
+  width: 60%;
+  margin: auto;
+  display: block;
+      backdrop-filter: blur(9px) saturate(137%);
+        -webkit-backdrop-filter: blur(9px) saturate(137%);
+        background-color: rgba(17, 25, 40, 0.325);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.131);
+}
+.Trade_wallet .col25{
+    backdrop-filter: blur(2px) saturate(137%);
+      -webkit-backdrop-filter: blur(2px) saturate(137%);
+      background-color: rgba(17, 25, 40, 0.13);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      margin: 1em;
+      width: 22%;
+}
+.Trade_wallet .col25 p{
+  text-align: center;
+  padding: 1em;
+}
+
+.how_to header{
+  text-align: center;
+  font-size: 3em;
+  font-weight: 600;
+  padding: 0.6em 0 0;
+  
+  background: #008ACF;
+    background: linear-gradient(to right, #008ACF 51%, #CF0068 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.how_to{
+margin-top: 4em;
+  backdrop-filter: blur(7px) saturate(200%);
+    -webkit-backdrop-filter: blur(7px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.33);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.how_to .col33 img{
+  margin: auto;
+  display: block;
+  width: 64px;
+
+
+}
+
+.how_to .col33 h3 {
+ text-align: center;
+ font-size: 1.5em;
+ font-weight: 600;}
+
+
+ .how_to .col33 p {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 1em;
+   text-align: center;
+   font-size: 1em;
+   font-weight: normal;
+   padding-top: 0.6em;
+ }
+
+ .Collection_nft  {
+  padding: 2em 0;
+ }
+
+ .Collection_nft h1{
+  font-size: 2em;
+  text-align: center;
+  padding: 2em 0;
+ }
+ .Collection_nft img {
+   width: 200px;
+   margin: auto 1em;
+ }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.explore_create_btn {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 0.5em 2em;
+  text-align: center;
+  font-size: 1em;
+    letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 1em;  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+/*footer*/
+footer{
+  padding-top: 5em;
+    background-color: #090009;
+    background-image:
+      radial-gradient(at 47% 33%, #67016a75 0, transparent 59%),
+      radial-gradient(at 82% 65%, #090009 0, transparent 55%);
+}
+.socail_media_ul {
+  display: flex;
+}
+.Reserved_footer{
+  text-align: center;
+  color: white;
+  padding-top: 1em;
+}
+
+.socail_media_ul li {
+  padding:0 1em 0 0;
+}
+li{
+  list-style: none;
+}
+.theonlogp{width: 70%;
+
+}
+
+.theonlog img{
+  width: 60px;
+}
+.socail_media_ul img{
+  padding-top: 1em;
+  width: 30px;
+}
+
+ .MarketPlace li,
+ .Links li {
+  margin: auto;
+    width: 50%;
+  padding-bottom: 1em;
+}
+.MarketPlace h1,
+.Links h1 {
+  font-size: 1.5em;
+  padding-bottom: 0.6em;
+  margin: auto;
+  width: 50%;
+}
+* {
+  box-sizing: border-box;
+}
+
+/*whitelist*/
+.numOf_Whitelised_Addrr{
+  font-size: 1em;
+}
+
+@media screen and (max-width: 1205px) {
+  .offcanvas {
+      background-color: #140114;
+      background-image:
+        radial-gradient(at 47% 33%, hsl(297.84, 98%, 21%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(234.55, 91%, 14.000000000000002%) 0, transparent 55%);
+    }
+.nav-link {
+ 
+    margin: 0.6em 1em;
+    padding: 0;
+  }
+  .col25,
+  .col33,
+  .col50 {
+    width: 100%;
+  }
+.wallet_container {
+  margin: auto;
+  width: 70%;
+  display: table;
+
+}
+.Trade_wallet .col25 {
+  width: 45%;
+  margin:  1em;
+  padding:  2em;
+  align-items: center;
+}
+
+  .homebanner_h1 br{
+    display: none;
+  }
+  .homebanner_col{
+    text-align: center;
+  }
+
+  .homebanner_h1 {
+    text-align: center;
+    width: 80%;
+    font-size: 3em;
+    margin: auto;
+  }
+  .homebanner_p{
+        text-align: center;
+          width: 70%;
+          margin: auto;
+
+  }
+  .banner_img img {
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+  .how_to{
+    width: 70%;
+    margin: auto;
+  }
+    footer .col33{
+      width: 33%;
+    }
+
+        .Trade_wallet .col25 img {
+          padding: 1.5em;
+         
+        }
+                .how_to header{
+                  font-size: 2em;
+                }
+                                .Trade_wallet .col25 p {
+                                  padding: 1em ;
+                                }
+                                .how_to header{
+                                  padding: 1em;
+                                }
+}
+
+
+@media screen and (max-width: 990px) {
+
+        .Trade_wallet .col25 {
+          width: 40%;
+          margin: 1em;
+          padding: 2em;
+          align-items: center;
+        }
+}
+
+@media screen and (max-width: 900px) {
+  .Trade_wallet .col25 img {
+    padding: 0.5em;
+
+  }
+
+  .Trade_wallet .col25 {
+    width: 40%;
+    margin: 1em;
+    padding: 2em;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+.wallet_container {
+    width: 100%;
+  }
+    .date_container {
+      width: 100%;
+
+    }
+        .homebanner_h1 {
+          text-align: center;
+          width: 80%;
+          font-size: 2em;
+          margin: auto;
+        }
+                 footer .col33 {
+                   width: 100%;
+                   text-align: center;
+                   margin: auto;
+                 }
+.socail_media_ul {
+  display: flex;
+  justify-content: center;
+}
+                    .MarketPlace h1,
+                    .MarketPlace li,
+                                        .Links li,
+                    .Links h1 {
+                      text-align: center;
+                      padding-bottom: 0.6em;
+                      margin: auto;
+                      width: 100%;
+                    }
+}
+
+@media screen and (max-width:532px) {
+  .Collection_nft img{
+    width: 140px;
+  }
+
+    .Collection_nft h1 {
+      font-size: 2em;
+    
+      padding: 2em 0 1em 0;
+    }
+  .homebanner_h1 {
+      font-size: 1.9em;
+      margin: auto;
+      width: 100%;
+    }
+        .wallets_support {
+          padding-top: 1.5em;
+          text-align: center;
+          font-size: 2em;
+          text-transform: capitalize;
+        }
+        .wallet_container {
+          width: 50%;}
+        .Trade_wallet .col25 {
+          width: 80%;
+          margin: 1em 2em;
+          padding: 2em;
+          align-items: center;
+        }
+  
+}
+
+@media screen and (max-width:352px) {
+.btn_timer{
+  padding: 0.3em;
+  font-size: 0.8em;
+}
+.homebanner_h1 {
+  font-size: 1.3em;
+
+}
+.homebanner_p {
+font-size: 0.7em;
+width: 100%;
+}
+.date_container {
+  width: 80%;
+}
+.wallets_support {
+  padding-top: 1.5em;
+  font-size: 1.5em;
+}
+.Trade_wallet_header{
+  font-size: 1em;
+}
+.how_to header {
+  padding: 0.5em 0.5em;
+  font-size: 1.4em;
+}
+.Trade_wallet .col25 {
+  width: 100%;
+  margin: 1em 0;
+  padding: 1em;
+  align-items: center;
+}
+.how_to {
+  width: 95%;
+  margin: auto;
+}
+.how_to .col33 p {
+  width: 100%;
+  padding-bottom: 1em;
+  text-align: center;
+  font-size: 1em;
+
+}
+.how_to .col33 h3 {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.theonlog img {
+  width: 40px;
+  padding-bottom: 1em;
+}
+.socail_media_ul img{
+  width: 30px;
+}
+}
+
+@media screen and (max-width:272px) {
+
+  button{
+    font-size: 1em;
+  }
+
+}
