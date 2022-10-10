@@ -108,11 +108,12 @@ export const getProviderOrSigner = async (needSigner = false) => {
 	const web3Provider = new providers.Web3Provider(provider);
 
 	// If user is not connected to the Goerli network, let them know and throw an error
-	// const { chainId } = await web3Provider.getNetwork();
-	// if (chainId !== 5) {
-	// 	window.alert("change to goerli network");
-	// 	throw new Error("Change Network TO Goerli");
-	// }
+
+	const { chainId } = await web3Provider.getNetwork();
+	if (chainId !== 5) {
+		window.alert("change to goerli network");
+		throw new Error("Change Network TO Goerli");
+	}
 
 	if (needSigner) {
 		const signer = web3Provider.getSigner();

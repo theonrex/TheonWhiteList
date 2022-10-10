@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useRouter } from "next/router";
 import Button from "react-bootstrap/Button";
-import {WalletConnects} from "./WalletConnect";
+// import {WalletConnects} from "./WalletConnect";
 
 function NavBar() {
 	const router = useRouter();
@@ -24,10 +24,9 @@ function NavBar() {
 									<Navbar.Toggle
 										aria-controls={`offcanvasNavbar-expand-${expand}`}
 									/>
-											<Button className="orange-btn hide_desktop">
-													{" "}
+											{/* <Button className="orange-btn hide_desktop">
 													<WalletConnects />
-												</Button>
+												</Button> */}
 								</div>
 						
 
@@ -80,7 +79,7 @@ function NavBar() {
 											>
 												Community{" "}
 											</Nav.Link>
-											<Nav.Link
+											{/* <Nav.Link
 												href="/#"
 												className={`${
 													"underline" +
@@ -90,10 +89,9 @@ function NavBar() {
 												} `}
 											>
 												<Button className="orange-btn hide_mobile">
-													{" "}
 													<WalletConnects />
 												</Button>
-											</Nav.Link>
+											</Nav.Link> */}
 										</Nav>
 									</Offcanvas.Body>
 								</Navbar.Offcanvas>

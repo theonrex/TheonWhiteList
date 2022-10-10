@@ -16,7 +16,9 @@ body {
     radial-gradient(at 82% 65%, hsl(234.55, 91%, 14.000000000000002%) 0, transparent 55%);
 
   }
-
+.navbar{
+  background: transparent !important;
+}
 
     .navbar-toggler-icon,
     .btn-close {
@@ -122,16 +124,34 @@ li
   width: 24%;
   padding: 1em;
 }
+.col30{
+  width: 30%;
+  float: left;
+    padding: 1em;
 
+}
 .col33 {
   float: left;
   width: 33%;
   padding: 1em;
 }
+.col40{
+  width: 39%;
+  float: left;
+}
 .col50{
   float: left;
   width: 49%;
   padding: 1em;
+}
+.col60{
+  width: 59%;
+  float: left;
+    padding: 1em;
+
+}
+.theonrex_nft img{
+  width: 100%;
 }
 
 .homebanner_h1{
@@ -376,6 +396,7 @@ footer{
 .Reserved_footer{
   text-align: center;
   color: white;
+  width: 100%;
   padding-top: 1em;
 }
 
@@ -410,6 +431,10 @@ li{
   margin: auto;
   width: 50%;
 }
+.MarketPlace li:hover, .Links li:hover {
+  color: #ff49a4;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -417,6 +442,26 @@ li{
 /*whitelist*/
 .numOf_Whitelised_Addrr{
   font-size: 1em;
+}
+/* //signin */
+.sign_in_text{
+  padding-top: 1em;
+  font-size: 3em;
+}
+
+/* user */
+.catnft img{
+width: 80%;
+border-radius: 50%;
+margin: auto;
+display: block;
+}
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 0.7em;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1205px) {
@@ -429,12 +474,19 @@ li{
   .nav_t{
     display: flex !important;
   }
+  .offcanvas.offcanvas-end {
+    top: 0;
+    right: 0;
+    width: 100%;
+    border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(100%);
+}
 
   .offcanvas {
-      background-color: #140114;
+      background-color: #140114 !important;
       background-image:
         radial-gradient(at 47% 33%, hsl(297.84, 98%, 21%) 0, transparent 59%),
-        radial-gradient(at 82% 65%, hsl(234.55, 91%, 14.000000000000002%) 0, transparent 55%);
+        radial-gradient(at 82% 65%, hsl(234.55, 91%, 14.000000000000002%) 0, transparent 55%) !important;
     }
 .nav-link {
  
@@ -442,8 +494,10 @@ li{
     padding: 0;
   }
   .col25,
+  .col40,
   .col33,
-  .col50 {
+  .col50,
+  .col60 {
     width: 100%;
   }
 .wallet_container {
@@ -504,6 +558,24 @@ li{
                                 .how_to header{
                                   padding: 1em;
                                 }
+
+                                  /* signin */
+.theonrex_nft_sign{
+  display: flex;
+  flex-direction: column;
+}
+.theonrex_nft_sign .col40{
+  order: 2;
+}
+.theonrex_nft_sign{
+  text-align: center;
+}
+.sign_in_text{
+  text-align: center;
+}
+.theonrex_nft_sign .col40{
+  padding-bottom: 2em;
+}
 }
 
 
@@ -550,6 +622,12 @@ li{
                    text-align: center;
                    margin: auto;
                  }
+            footer      .MarketPlace,
+            footer .Links {
+                  width: 50% ;
+                  padding: 0 4em;
+                  text-align: left;
+                 }
 .socail_media_ul {
   display: flex;
   justify-content: center;
@@ -558,7 +636,6 @@ li{
                     .MarketPlace li,
                                         .Links li,
                     .Links h1 {
-                      text-align: center;
                       padding-bottom: 0.6em;
                       margin: auto;
                       width: 100%;
@@ -566,9 +643,20 @@ li{
 }
 
 @media screen and (max-width:532px) {
+  .sign_in_text {
+    padding-top: 1em;
+    font-size: 2em;
+}
+ footer .col33 {
+    text-align: left;
+}
   .Collection_nft img{
     width: 140px;
   }
+  .socail_media_ul {
+    display: flex;
+    justify-content: flex-start;
+}
   .date_container .col25{
 padding: 0.5em;
   }
@@ -600,10 +688,19 @@ padding: 0.5em;
           padding: 2em;
           align-items: center;
         }
+         footer      .MarketPlace,
+            footer .Links {
+                  width: 100% ;
+                  padding: 0 1em;
+                  text-align: left;
+                 }
   
 }
 
 @media screen and (max-width:352px) {
+  .explore_btn{
+    font-size: 0.7em;
+  }
 .btn_timer{
   padding: 0.3em;
   font-size: 0.8em;
