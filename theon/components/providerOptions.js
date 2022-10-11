@@ -4,15 +4,10 @@ export const providerOptions = {
   walletconnect: {
     package: WalletConnect, // required
     options: {
-      infuraId: "27e484dcd9e3efcfd25a83a78777cdf1", // required
+      infuraId: "3c47dc003d7c4d3e87c13e1bc25b36ee", // required
     },
     rpc: {
-      1: "wss://mainnet.infura.io/v3/" + "27e484dcd9e3efcfd25a83a78777cdf1",
-      42: "wss://kovan.infura.io/v3/" + "27e484dcd9e3efcfd25a83a78777cdf1",
-      137:
-        "wss://polygon-mainnet.infura.io/v3/" +
-        "27e484dcd9e3efcfd25a83a78777cdf1",
-      80001: "wss://rpc-mumbai.matic.today",
+      5: "https://goerli.infura.io/v3/3c47dc003d7c4d3e87c13e1bc25b36ee",
     },
   },
 };

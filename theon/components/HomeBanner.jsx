@@ -19,22 +19,19 @@ const HomeBanner = () => {
         </p>
 
         <a target="_blank" href="https://goerlifaucet.com/">
-          {" "}
-          Get Goerli Testnet Eth
+          <button className="explore_btn">Get Goerli Testnet Eth</button>
         </a>
+        <Whitelist />
+
         <a href="/signin">
-          <button className="explore_btn"></button>
-          <button className="explore_btn"> Click to Join </button>
+          {/* <button className="explore_btn"> Click to Join </button> */}
         </a>
         <br />
       </div>
       <div className="col50 banner_img">
         <img src={ApePng.src} alt="apenft" />
 
-        <div>
-          {" "}
-          <Whitelist />
-        </div>
+        <div> </div>
       </div>
       <div className="presale_starts">
         <DateCount />
