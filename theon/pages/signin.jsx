@@ -63,29 +63,15 @@ function SignIn() {
     const signature = await signMessageAsync({ message });
 
     console.log("Succesful Sign In, Redirecting to User Page");
-    alert("succes");
-    function myFunction() {
-      if (signature) {
-        console.log("Success")
-      }
-      else console.log("fail")
-    }
-
-    console.log(message);
 
     const { url } = await signIn("credentials", {
       message,
       signature,
       redirect: false,
       callbackUrl: "/user",
-    })
-      .then((error) => console.log(error))
-      .catch((error) => console.log(error));
+    });
 
-    // if (url?.error) {
-    //   console.log(error);
-    // }
-    // push(url);
+    push(url);
   };
 
   return (

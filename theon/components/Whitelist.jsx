@@ -1,11 +1,21 @@
 import React from 'react'
 import Web3Modal from "web3modal";
-import { providers, Contract } from "ethers";
+import {ethers, providers, Contract } from "ethers";
 import { useEffect, useRef, useState } from "react";
 import { WHITELIST_CONTRACT_ADDRESS, abi } from "../constants";
 // import { providerOptions } from "./providerOptions";
 // import { getProviderOrSigner } from './WalletConnect';
+import { providerOptions } from "./providerOptions";
 
+let web3Modal;
+if (typeof window !== "undefined") {
+  web3Modal = new Web3Modal({
+    cacheProvider: true,
+    network: "goerli",
+    providerOptions, // required
+    theme: "dark",
+  });
+}
 
 const Whitelist = () => {
 	  // walletConnected keep track of whether the user's wallet is connected or not
@@ -21,8 +31,8 @@ const [walletConnected, setWalletConnected] = useState(false);
 
   const getProviderOrSigner = async (needSigner = false) => {
     //connect to metamask
-    const provider = await web3ModalRef.current.connect();
-        const web3Provider = new providers.Web3Provider(provider);
+    const provider = await web3Modal.connect();
+        const web3Provider = new ethers.providers.Web3Provider(provider);
         // If user is not connected to the GoerliETH network, let them know and throw an error
         const {chainId} = await web3Provider.getNetwork();
         if (chainId !== 5) {
@@ -166,11 +176,13 @@ const [walletConnected, setWalletConnected] = useState(false);
 	  if (!walletConnected) {
 		// Assign the Web3Modal class to the reference object by setting it's `current` value
 		// The `current` value is persisted throughout as long as this page is open
-		web3ModalRef.current = new Web3Modal({
-		  network: "goerli",
-		  providerOptions: {},
-		  disableInjectedProvider: false,
-		});
+		web3Modal = new Web3Modal({
+      network: "goerli",
+      cacheProvider: true,
+      providerOptions, // required
+      theme: "dark",
+     
+    });
 		connectWallet();
 	  }
 	}, [walletConnected]);
@@ -200,9 +212,7 @@ const [walletConnected, setWalletConnected] = useState(false);
 									// }
 	return (
 		<div>
-			<button className="explore_btn">
-				<a  target="_blank" href="https://goerlifaucet.com/"> Get Free Eth</a>
-			</button>
+		
 
 			<div className="numOf_Whitelised_Addrr">
 				{" "}

@@ -16,6 +16,12 @@ const HomeBanner = () => {
           digital creators.Discover the best NFT collections.
         </p>
         <a href="/signin">
+          <button className="explore_btn">
+            <a target="_blank" href="https://goerlifaucet.com/">
+              {" "}
+              Get Goerli Testnet Eth
+            </a>
+          </button>
           <button className="explore_btn"> Click to Join </button>
         </a>
         <br />
@@ -23,7 +29,10 @@ const HomeBanner = () => {
       <div className="col50 banner_img">
         <img src={ApePng.src} alt="apenft" />
 
-        <div></div>
+        <div>
+          {" "}
+          <Whitelist />
+        </div>
       </div>
       <div className="presale_starts">
         <DateCount />
