@@ -1,5 +1,5 @@
 import React from "react";
-import Whitelist from "../components/Whitelist";
+// import Whitelist from "../components/Whitelist";
 import Nft2 from "../public/nft2.png";
 
 import { getSession, signOut } from "next-auth/react";
@@ -13,7 +13,7 @@ function User({ user }) {
         </section>
         <section className="col50">
           <h4>User session:</h4>
-          <Whitelist />
+          {/* <Whitelist /> */}
 
           <pre id="overflowTest">{JSON.stringify(user, null, 6)}</pre>
 

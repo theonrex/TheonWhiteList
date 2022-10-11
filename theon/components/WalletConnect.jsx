@@ -90,9 +90,9 @@ useEffect(() => {
 	return (
 		<div>
 			{
-				!account ? <span onClick={connectWallet}> Connect Wallet </span>
+				!account ? <button onClick={connectWallet}> Connect Wallet </button>
 	 :
-			<span onClick={disconnect}> Disconnect Wallet </span>
+			<button onClick={disconnect}> Disconnect Wallet </button>
 			}
 		</div>
 	);

@@ -21,11 +21,13 @@ const client = createClient({
   autoConnect: true,
 });
 
+
 //layout components
 import Layout from "../components/Layout";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
 
 function MyApp({ Component, pageProps }) {
   //   useEffect(() => {

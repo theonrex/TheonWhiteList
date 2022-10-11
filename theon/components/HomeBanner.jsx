@@ -2,7 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ApePng from "../public/apes.png";
 import DateCount from "./DateCount";
-import Whitelist from "./Whitelist";
+// import { WalletConnects } from "./WalletConnect";
+import App from "../Cweb3modal/App"
+
 const HomeBanner = () => {
 	return (
     <div className="container rowx">
@@ -15,13 +17,13 @@ const HomeBanner = () => {
           The leading NFT Marketplace on EthereumHome to the next generation of
           digital creators.Discover the best NFT collections.
         </p>
+
+        <a target="_blank" href="https://goerlifaucet.com/">
+          {" "}
+          Get Goerli Testnet Eth
+        </a>
         <a href="/signin">
-          <button className="explore_btn">
-            <a target="_blank" href="https://goerlifaucet.com/">
-              {" "}
-              Get Goerli Testnet Eth
-            </a>
-          </button>
+          <button className="explore_btn"></button>
           <button className="explore_btn"> Click to Join </button>
         </a>
         <br />
@@ -31,7 +33,7 @@ const HomeBanner = () => {
 
         <div>
           {" "}
-          <Whitelist />
+          <App />
         </div>
       </div>
       <div className="presale_starts">
