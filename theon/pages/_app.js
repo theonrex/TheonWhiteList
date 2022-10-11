@@ -10,6 +10,13 @@ import {
 } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import { SessionProvider } from "next-auth/react";
+import { Web3Modal } from "@web3modal/react";
+import { chains, providers } from "@web3modal/ethereum";
+//layout components
+import Layout from "../components/Layout";
+import Head from "next/head";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const { provider, webSocketProvider } = configureChains(defaultChains, [
   publicProvider(),
@@ -21,13 +28,30 @@ const client = createClient({
   autoConnect: true,
 });
 
-
-//layout components
-import Layout from "../components/Layout";
-import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
+//Web3Modal
+const modalConfig = {
+  theme: "dark",
+  accentColor: "default",
+  ethereum: {
+    appName: "TheonNfts",
+    chains: [
+      chains.goerli,
+      chains.mainnet,
+      chains.rinkeby,
+      chains.avalanche,
+      chains.avalancheFuji,
+      chains.polygon,
+      chains.polygonMumbai,
+    ],
+    providers: [
+      providers.walletConnectProvider({
+        projectId: "a8dbfb8b580bd1d4147c2b24ab3a6d37",
+      }),
+    ],
+    autoConnect: true,
+  },
+  projectId: "a8dbfb8b580bd1d4147c2b24ab3a6d37",
+};
 
 function MyApp({ Component, pageProps }) {
   //   useEffect(() => {
@@ -49,6 +73,8 @@ function MyApp({ Component, pageProps }) {
         <Navbar />
 
         <Component {...pageProps} />
+        <Web3Modal config={modalConfig} />
+
         <footer>
           <Footer />
         </footer>

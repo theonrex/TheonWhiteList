@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ApePng from "../public/apes.png";
 import DateCount from "./DateCount";
 // import { WalletConnects } from "./WalletConnect";
-import App from "../Cweb3modal/App"
+import Whitelist from "../components/Whitelist"
 
 const HomeBanner = () => {
 	return (
@@ -33,7 +33,7 @@ const HomeBanner = () => {
 
         <div>
           {" "}
-          <App />
+          <Whitelist />
         </div>
       </div>
       <div className="presale_starts">
