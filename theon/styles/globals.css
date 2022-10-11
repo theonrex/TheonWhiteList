@@ -478,6 +478,11 @@ pre {
 }
 
 @media screen and (max-width: 1205px) {
+
+  .coin ,
+  .meta{
+    display: none;
+  }
   .hide_mobile{
     display: none !important;
   }

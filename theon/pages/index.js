@@ -3,20 +3,20 @@ import styles from "../styles/Home.module.css";
 import HomeBanner from "../components/HomeBanner";
 import Footer from "../components/Footer";
 import Wallets from "../components/Wallets";
-import { useAccount,  ConnectButton } from "@web3modal/react";
+import { useAccount, ConnectButton, UseDisconnect } from "@web3modal/react";
 
 export default function Home({ children }) {
-  const { address, isConnected } = useAccount();
-  if (!isConnected) {
-    return <ConnectButton />;
-  }
+  // const { address, isConnected } = useAccount();
+  // if (!isConnected) {
+  //   return <ConnectButton />;
+  // }
   return (
     <div>
       <main>
         <HomeBanner />
-        <h1>
+        {/* <h1>
           Your address is {address}
-        </h1>
+        </h1> */}
 
         <Wallets />
       </main>

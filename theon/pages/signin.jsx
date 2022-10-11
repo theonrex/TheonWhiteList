@@ -82,16 +82,22 @@ function SignIn() {
             Welcome to <span className="home_banner_span">TheonNFTs</span>{" "}
           </h3>
           <p> Connect Your Wallet To Join The Whitelist</p>
-          <button className="explore_btn" onClick={() => handleAuth("meta")}>
-            Authenticate via Metamask
+          <button
+            className="explore_btn meta"
+            onClick={() => handleAuth("meta")}
+          >
+            Login with Metamask
           </button>
           <br />
-          <button className="explore_btn" onClick={() => handleAuth("coin")}>
-            Authenticate via Coinbase
+          <button
+            className="explore_btn coin"
+            onClick={() => handleAuth("coin")}
+          >
+            Login with Coinbase
           </button>
           <br />
           <button className="explore_btn" onClick={() => handleAuth("wal")}>
-            Authenticate via Wallet Connect
+            Login with Wallet Connect
           </button>
         </section>
         <section className="col60 theonrex_nft">

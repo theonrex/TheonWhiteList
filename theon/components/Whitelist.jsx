@@ -18,7 +18,6 @@ if (typeof window !== "undefined") {
 }
 import { useAccount, ConnectButton, UseDisconnect } from "@web3modal/react";
 
-
 const Whitelist = () => {
   // walletConnected keep track of whether the user's wallet is connected or not
   const [walletConnected, setWalletConnected] = useState(false);
@@ -148,7 +147,7 @@ const Whitelist = () => {
     }
   };
   const renderButton = () => {
-    if (walletConnected) {
+    if (isConnected) {
       if (joinedWhitelist) {
         return <div>Thanks for joining the Whitelist!</div>;
       } else if (loading) {
@@ -205,9 +204,9 @@ const Whitelist = () => {
     <div>
       <div className="numOf_Whitelised_Addrr">
         {" "}
-        {/* <h1>
-          Your address is {address}
-        </h1> */}
+        <p>
+          Your address is <br />  {address}
+        </p>
         No of Address in the whitelist : {numberOfWhitelisted}
       </div>
       <div>{renderButton()}</div>
