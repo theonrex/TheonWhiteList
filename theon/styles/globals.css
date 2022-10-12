@@ -82,6 +82,34 @@ a:active {
 .hide_desktop{
   display: none !important;
 }
+.ConnectButton{
+  padding-top: 1em;
+}
+ button {
+  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+  background-size: 800% 400%;
+  padding: 0.5em 2em;
+    display: inline-block;
+  border: none;
+  border-radius: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 1em;
+  color: white;
+  transition: all .5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+ button:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+}
+
+ button:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+}
+
 
 a:hover{
   color: white;
@@ -479,6 +507,11 @@ pre {
 
 @media screen and (max-width: 1205px) {
 
+  .ConnectButton w3m-connect-button button{
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
   .coin ,
   .meta{
     display: none;
@@ -661,6 +694,11 @@ pre {
 }
 
 @media screen and (max-width:532px) {
+  .homebanner_p {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
   .sign_in_text {
     padding-top: 1em;
     font-size: 2em;
@@ -716,6 +754,10 @@ padding: 0.5em;
 }
 
 @media screen and (max-width:352px) {
+  .home_banner_span {
+    font-size: 1.6em;
+  
+}
   .explore_btn{
     font-size: 0.7em;
   }
@@ -742,8 +784,8 @@ width: 100%;
   font-size: 1em;
 }
 .how_to header {
-  padding: 0.5em 0.5em;
-  font-size: 1.4em;
+  padding: 1.5em 0.5em;
+  font-size: 1.5em;
 }
 .Trade_wallet .col25 {
   width: 100%;
@@ -783,3 +825,4 @@ width: 100%;
   }
 
 }
+
