@@ -208,7 +208,7 @@ const Whitelist = () => {
         No of Address in the whitelist : {numberOfWhitelisted}
       </div>
       <div>{renderButton()}</div>
-      <button onClick={disconnect}>Disconnect</button>
+      <button className="explore_btn" onClick={disconnect}>Disconnect</button>
     </div>
   );
 };
