@@ -2,14 +2,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/globals.css";
 //moralis Auth
-import {
-  createClient,
-  configureChains,
-  defaultChains,
-  WagmiConfig,
-} from "wagmi";
-import { publicProvider } from "wagmi/providers/public";
-import { SessionProvider } from "next-auth/react";
+
 import { Web3Modal } from "@web3modal/react";
 import { chains, providers } from "@web3modal/ethereum";
 //layout components
@@ -18,15 +11,9 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const { provider, webSocketProvider } = configureChains(defaultChains, [
-  publicProvider(),
-]);
 
-const client = createClient({
-  provider,
-  webSocketProvider,
-  autoConnect: true,
-});
+
+
 
 //Web3Modal
 const modalConfig = {
@@ -63,23 +50,21 @@ function MyApp({ Component, pageProps }) {
   // }, [])
 
   return (
-    <WagmiConfig client={client}>
-      <SessionProvider session={pageProps.session} refetchInterval={0}>
-        <Head>
-          <title>Whitelist Dapp</title>
-          <meta name="description" content="Whitelist-Dapp" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Navbar />
+    <div>
+      <Head>
+        <title>Whitelist Dapp</title>
+        <meta name="description" content="Whitelist-Dapp" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
 
-        <Component {...pageProps} />
-        <Web3Modal config={modalConfig} />
+      <Component {...pageProps} />
+      <Web3Modal config={modalConfig} />
 
-        <footer>
-          <Footer />
-        </footer>
-      </SessionProvider>
-    </WagmiConfig>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 }
 
