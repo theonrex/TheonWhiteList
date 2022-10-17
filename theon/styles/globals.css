@@ -91,7 +91,7 @@ a:active {
   padding: 0.5em 2em;
     display: inline-block;
   border: none;
-  border-radius: 1em;
+  border-radius: 1em !important;
   font-size: 1em;
   font-weight: 300;
   margin-top: 1em;
