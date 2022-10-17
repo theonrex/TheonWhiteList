@@ -2,7 +2,7 @@ import React from 'react'
 
 const Community = () => {
   return (
-    <div className='container'>comming soon</div>
+    <div className='container'>coming soon</div>
   )
 }
 
