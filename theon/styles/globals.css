@@ -826,3 +826,6 @@ width: 100%;
 
 }
 
+.navbar-toggler{
+  border-radius: 2px !important;
+}

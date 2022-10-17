@@ -39,6 +39,7 @@ const modalConfig = {
   },
   projectId: "a8dbfb8b580bd1d4147c2b24ab3a6d37",
 };
+  import Nft from "../public/nft3.png";
 
 function MyApp({ Component, pageProps }) {
   //   useEffect(() => {
@@ -52,9 +53,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>Whitelist Dapp</title>
-        <meta name="description" content="Whitelist-Dapp" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="%PUBLIC_URL%/favicon.png" /> */}
+
+        <meta name="description" content="TheonNfts" />
+        <link rel="icon" href={Nft.src} />
+        <title> TheonNfts</title>
+        {/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
       </Head>
       <Navbar />
 
